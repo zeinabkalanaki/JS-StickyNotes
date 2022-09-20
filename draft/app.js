@@ -1,9 +1,10 @@
 const btnShowPopup = document.querySelector(".add");
 const overlay = document.querySelector(".overlay");
 const btnClosePopup = document.querySelector("header i");
+const popupTitle = document.querySelector(".popup-title");
 const btnFormButton = document.querySelector("form button");
-const title = document.querySelector(".popup-title input");
-const description = document.querySelector(".popup-description textarea");
+const title = document.querySelector(".note-title input");
+const description = document.querySelector(".note-content textarea");
 
 const months = [
   "January",
@@ -53,11 +54,13 @@ function getNotes() {
 function showAddPopup() {
   overlay.classList.add("show");
   btnFormButton.innerText = "Add";
+  popupTitle.innerText = "Add note";
 }
 
 function showUpdatePopup(index) {
   overlay.classList.add("show");
   btnFormButton.innerText = "Update";
+  popupTitle.innerText = "Update note";
 
   description.value = notes[index].content;
   title.value = notes[index].title;
@@ -65,6 +68,9 @@ function showUpdatePopup(index) {
 }
 
 function deleteNote(index) {
+  let confirmDelete = confirm("Are you sure you want to delete this note?");
+  if (confirmDelete == false) return;
+  
   notes.splice(index, 1);
   localStorage.setItem("notes", JSON.stringify(notes));
   getNotes();
