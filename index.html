@@ -4,46 +4,48 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
     <link
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="overlay">
-        <div class="popup-container">
-            <header>
-                <p class="popup-title">Add note</p>
-                <i class="uil uil-times"></i>
-            </header>
-            <form action="#">
-                <div class="row title">
-                    <label>Title</label>
-                    <input type="text">
-                </div>
-                <div class="row description">
-                    <label>Description</label>
-                    <textarea></textarea>
-                </div>
-                <button>Add</button>
-            </form>
-        </div>
+      <div class="popup">
+        <header>
+          <p class="popup-title"> Add note</p>
+          <i class="uil uil-times"></i>
+        </header>
+        <form action="#">
+            <div class="row note-title">
+                <label> Title</label>
+                <input type="text">
+            </div>
+            <div class="row note-content">
+                <label> Description</label>
+                <textarea ></textarea>
+            </div>
+            <button>Add</button>
+        </form>
+      </div>
     </div>
     <div class="wrapper">
       <div class="add">
-        <div class="icon"><i class="uil uil-plus"></i></div>
-        <p>Add a new note</p>
+        <div class="icon">
+          <i class="uil uil-plus"></i>
+        </div>
+        <p>Add a new note!</p>
       </div>
       <div class="note">
         <div>
-          <p class="note-title">Title</p>
-          <p class="content">Content</p>
+          <p class="title">Title</p>
+          <p class="description">description</p>
         </div>
         <div class="footer">
-          <div>September 14, 2023</div>
-          <div class="menu-container">
+          <div>Septamber 19, 2022</div>
+          <div class="settings">
             <i class="uil uil-ellipsis-h"></i>
             <ul class="menu">
               <li><i class="uil uil-pen"></i>Edit</li>
@@ -53,6 +55,6 @@
         </div>
       </div>
     </div>
-    <script src="app.js"></script>
+    <script src="app.js"  ></script>
   </body>
 </html>
