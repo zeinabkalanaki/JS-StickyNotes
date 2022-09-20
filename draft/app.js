@@ -1,0 +1,114 @@
+const btnShowPopup = document.querySelector(".add");
+const overlay = document.querySelector(".overlay");
+const btnClosePopup = document.querySelector("header i");
+const btnFormButton = document.querySelector("form button");
+const title = document.querySelector(".popup-title input");
+const description = document.querySelector(".popup-description textarea");
+
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+const notes = JSON.parse(localStorage.getItem("notes") || "[]");
+let updateIndex = 0;
+
+function getNotes() {
+  document.querySelectorAll(".note").forEach((note) => note.remove());
+
+  if (notes) {
+    notes.forEach((note, index) => {
+      const element = `<div class="note">
+                        <div>
+                          <p class="title">${note.title}</p>
+                          <p class="description">${note.content}</p>
+                        </div>
+                        <div class="footer">
+                          <div>${note.date}</div>
+                          <div class="settings">
+                            <i class="uil uil-ellipsis-h"></i>
+                            <ul class="menu">
+                              <li onclick="deleteNote(${index})"><i class="uil uil-trash" ></i>Delete</li>
+                              <li onclick="showUpdatePopup(${index})"><i class="uil uil-pen"></i>Edit</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>`;
+
+      btnShowPopup.insertAdjacentHTML("afterend", element);
+    });
+  }
+}
+
+function showAddPopup() {
+  overlay.classList.add("show");
+  btnFormButton.innerText = "Add";
+}
+
+function showUpdatePopup(index) {
+  overlay.classList.add("show");
+  btnFormButton.innerText = "Update";
+
+  description.value = notes[index].content;
+  title.value = notes[index].title;
+  updateIndex = index;
+}
+
+function deleteNote(index) {
+  notes.splice(index, 1);
+  localStorage.setItem("notes", JSON.stringify(notes));
+  getNotes();
+}
+
+getNotes();
+
+btnShowPopup.addEventListener("click", () => {
+  showAddPopup();
+});
+
+btnClosePopup.addEventListener("click", () => {
+  overlay.classList.remove("show");
+});
+
+btnFormButton.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const noteDate = new Date();
+  if (btnFormButton.innerText.toLowerCase() == "add") {
+    const newNote = {
+      content: description.value,
+      title: title.value,
+      date: `${
+        months[noteDate.getMonth()]
+      } ${noteDate.getDate()}, ${noteDate.getFullYear()}`,
+    };
+
+    notes.push(newNote);
+  }
+
+  if (btnFormButton.innerText.toLowerCase() == "update") {
+    notes[updateIndex].content = description.value;
+    notes[updateIndex].title = title.value;
+    notes[updateIndex].date = `${
+      months[noteDate.getMonth()]
+    } ${noteDate.getDate()}, ${noteDate.getFullYear()}`;
+  }
+
+  localStorage.setItem("notes", JSON.stringify(notes));
+  title.value = "";
+  description.value = "";
+
+  getNotes();
+
+  btnClosePopup.click();
+});

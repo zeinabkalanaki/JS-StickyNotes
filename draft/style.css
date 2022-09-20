@@ -2,30 +2,29 @@
 
 * {
     font-family: 'Poppins';
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     z-index: 0;
 }
 
 body {
-    background-color: deeppink;
+    background-color: blueviolet;
 }
 
 .wrapper {
-    margin: 50px;
-    color: #575757;
-
     display: grid;
     gap: 15px;
     grid-template-columns: repeat(auto-fill, 250px);
+
+    margin: 50px;
 }
 
 .wrapper>div {
     background-color: #fff;
     border-radius: 5px;
     height: 250px;
-    padding: 15px 20px;
+    padding: 20px;
 }
 
 .add {
@@ -33,7 +32,24 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: deeppink;
+
+    color: blueviolet;
+
+    cursor: pointer;
+}
+
+.icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+    border: 2px dashed blueviolet;
+
+    font-size: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .add p {
@@ -41,35 +57,17 @@ body {
     padding-top: 20px;
 }
 
-.icon {
-    font-size: 40px;
-    border: 2px dashed deeppink;
-
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .note {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    color: #575757;
+
+    cursor: pointer;
 }
 
-.footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    border-top: 1px solid #ccc;
-    padding-top: 10px;
-}
-
-.note-title {
+.title {
     font-size: 22px;
 }
 
@@ -77,135 +75,140 @@ body {
     font-size: 16px;
 }
 
-/*******************/
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
-.menu-container {
-    position: relative;
+    font-size: 14px;
 
+    border-top: 1px solid #CCC;
+    padding-top: 10px;
 }
 
-.menu {
+.settings {
+    cursor: pointer;
+
+    position: relative;
+}
+
+.settings .menu {
     position: absolute;
     bottom: 0;
     right: -5px;
 
     background-color: #fff;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
     border-radius: 5px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 
     transform: scale(0);
 }
 
-.menu-container:hover .menu {
+.settings:hover .menu {
     transform: scale(1);
     transform-origin: bottom right;
     transition: transform 0.2s ease;
 }
 
-.menu-container .menu li {
+.settings .menu li {
+    cursor: pointer;
+
+    padding: 8px 10px;
+    margin: 5px 0;
+
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
 
-    padding: 2px 18px;
-    margin: 8px 0;
-
-    cursor: pointer;
-
 }
 
-.menu-container .menu li:hover {
+.settings .menu li:hover {
     background-color: #f5f5f5;
 }
 
-.menu-container .menu li i {
-    padding-right: 8px;
+.settings .menu li i {
 
+    padding-right: 8px;
 }
 
-/******************/
-
 .overlay {
-    background-color: rgba(0, 0, 0, 0.4);
     position: fixed;
     top: 0;
     left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
     width: 100%;
     height: 100%;
-
-    z-index: 1; /* must have z-index and it's applied to childern*/
+    z-index: 2;
 
     opacity: 0;
-    pointer-events: none;  /* must make below content clickable*/
-    transition: all 0.25s ease;
+    pointer-events: none;
 }
 
-.overlay.show {
+.overlay.show{
     opacity: 1;
-    pointer-events: auto;  /* must make popup content clickable*/
+    pointer-events: auto;
 }
 
-
-.popup-container {
+.popup {
     position: absolute;
-    top: 50%;
     left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
 
+    color: #575757;
     background-color: #fff;
     border-radius: 5px;
-    color: #575757;
 
     max-width: 400px;
     width: 100%;
 }
 
-.popup-container header {
+.popup header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
-    padding: 15px 20px;
-    font-size: 22px;
     border-bottom: 1px solid #ccc;
+
+    padding: 10px 20px;
+
 }
 
-.popup-container header  i{
-    cursor: pointer;
+.popup form {
+    margin: 20px;
 }
 
-.popup-container form {
-    margin: 15px 25px 35px;
-}
-.popup-container form .row{
-    margin-bottom: 20px;
+.popup form .row{
+    margin-top: 20px;
 }
 
-.popup-container form .row label{
-    display: block;
-    margin-bottom: 10px;
-}
-
-
-.popup-container form :where(input,textarea){
+.popup form :where(input, textarea) {
     width: 100%;
     outline: none;
+
     border: 1px solid #8b8989;
     border-radius: 4px;
-    padding: 15px;
+    padding: 10px 15px;
+
 }
 
-form textarea{
+.popup form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.popup form textarea{
     resize: none;
     height: 150px;
 }
 
-form button{
-    width: 100%;
-    border: none;
-    padding: 15px;
-    background-color: deeppink;
-    color: #fff;
-    border-radius: 4px;
-    cursor: pointer;
+.popup form button{
+  width: 100%;
+  border: none;
+  background-color: blueviolet;
+  padding: 10px;
+  border-radius: 4px;
+  color: #fff;
+
+  cursor: pointer;
 }
