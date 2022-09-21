@@ -1,5 +1,7 @@
 # **StickyNotes**
 
+This stickynotes is developed by pure javascript and css and stores notes by using localstorage.
+
 The final result is 👇
 
 
