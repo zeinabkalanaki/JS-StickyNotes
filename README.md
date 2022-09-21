@@ -2,11 +2,14 @@
 
 The final result is 👇
 
-![Final result](https://github.com/zeinabkalanaki/JS-StickyNotes/blob/main/images/0.png?raw=true)
 
-![Addinge new note by a popup](https://github.com/zeinabkalanaki/JS-StickyNotes/blob/main/images/1.png?raw=true)
 
-![Editing and deleting a note](https://github.com/zeinabkalanaki/JS-StickyNotes/blob/main/images/2.png?raw=true)
+
+|![Final result](https://github.com/zeinabkalanaki/JS-StickyNotes/raw/main/images/0.png?raw=true)| ![Addinge new note by a popup](https://github.com/zeinabkalanaki/JS-StickyNotes/raw/main/images/1.png?raw=true)|![Editing and deleting a note](https://github.com/zeinabkalanaki/JS-StickyNotes/raw/main/images/2.png?raw=true)
+|--|--|--|
+
+
+
 
 ## 💡 Number 1:
  > sdvsdv
