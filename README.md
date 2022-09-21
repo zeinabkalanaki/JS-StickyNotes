@@ -1,5 +1,6 @@
-**JS-StickyNotes**
-Some tips for creating a simple sticky note with pure js and css
+# **StickyNotes**
+
+The final result is 👇
 
 ![Final result](https://github.com/zeinabkalanaki/JS-StickyNotes/blob/main/images/0.png?raw=true)
 
