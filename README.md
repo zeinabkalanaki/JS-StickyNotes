@@ -41,7 +41,7 @@ The final result is 👇
     
 ```
 ## 💡 Number 4: Creating two-part sections
- > sdvsdv
+ > In this sample, a horizontal two-part section is used for footers' notes by code below
  
  ```
     display: flex;
@@ -50,7 +50,7 @@ The final result is 👇
     
 ```
 
- > sdvsdv
+ > And a vertical two-part section is used for positioning element in note itself by code below
  
  ```
     display: flex;
