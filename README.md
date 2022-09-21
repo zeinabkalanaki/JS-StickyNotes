@@ -50,7 +50,7 @@ The final result is 👇
     
 ```
 
- > And a vertical two-part section is used for positioning element in note itself by code below
+ > And a vertical two-part section is used for positioning element in a note itself by code below
  
  ```
     display: flex;
