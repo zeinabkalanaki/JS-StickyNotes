@@ -1,11 +1,11 @@
 **JS-StickyNotes**
 Some tips for creating a simple sticky note with pure js and css
 
-![enter image description here](https://github.com/zeinabkalanaki/JS-StickyNotes/blob/main/images/0.png?raw=true)
+![Final result](https://github.com/zeinabkalanaki/JS-StickyNotes/blob/main/images/0.png?raw=true)
 
-![enter image description here](https://github.com/zeinabkalanaki/JS-StickyNotes/blob/main/images/1.png?raw=true)
+![Addinge new note by a popup](https://github.com/zeinabkalanaki/JS-StickyNotes/blob/main/images/1.png?raw=true)
 
-![enter image description here](https://github.com/zeinabkalanaki/JS-StickyNotes/blob/main/images/2.png?raw=true)
+![Editing and deleting a note](https://github.com/zeinabkalanaki/JS-StickyNotes/blob/main/images/2.png?raw=true)
 
 ## 💡 Number 1:
  > sdvsdv
