@@ -13,8 +13,8 @@ The final result is 👇
 
 
 
-## 💡 Number 1:
- > sdvsdv
+## 💡 Number 1: Stacking containers side by side horizontally
+ > CSS Grid is used for placing notes side by side as below
  
  ```
     display: grid;
@@ -22,8 +22,8 @@ The final result is 👇
     gap: 15px;
     
 ```
-## 💡 Number 2:
- > sdvsdv
+## 💡 Number 2: Creating a circular container
+ > Like the add buttom in this stickynote, a circular container can be created by assigning a css class containing code below to a container
  
  ```
     width: 80px;
@@ -31,7 +31,7 @@ The final result is 👇
     border-radius: 50%;
     
 ```
-## 💡 Number 3:
+## 💡 Number 3: Centering an element inside a container both horizontally and vertically
  > sdvsdv
  
  ```
@@ -40,7 +40,7 @@ The final result is 👇
     justify-content: center;
     
 ```
-## 💡 Number 4:
+## 💡 Number 4: Creating two-part sections
  > sdvsdv
  
  ```
