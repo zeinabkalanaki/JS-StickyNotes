@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: blueviolet;
+    background-color: #e664b0;
 }
 
 .wrapper {
@@ -33,7 +33,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    color: blueviolet;
+    color: #e664b0;
 
     cursor: pointer;
 }
@@ -43,7 +43,7 @@ body {
     height: 80px;
     border-radius: 50%;
 
-    border: 2px dashed blueviolet;
+    border: 2px dashed #e664b0;
 
     font-size: 40px;
 
@@ -209,7 +209,7 @@ body {
 .popup form button{
   width: 100%;
   border: none;
-  background-color: blueviolet;
+  background-color: #e664b0;
   padding: 10px;
   border-radius: 4px;
   color: #fff;
