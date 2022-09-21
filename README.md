@@ -32,7 +32,7 @@ The final result is 👇
     
 ```
 ## 💡 Number 3: Centering an element inside a container both horizontally and vertically
- > sdvsdv
+ > A CSS class with code below is need to assign to an container
  
  ```
     display: flex;
