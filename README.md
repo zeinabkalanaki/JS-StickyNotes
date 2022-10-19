@@ -4,10 +4,7 @@ This stickynotes is developed by pure javascript and css and stores notes by usi
 
 The final result is 👇
 
-
-
-
-|![Final result](https://github.com/zeinabkalanaki/JS-StickyNotes/raw/main/images/0.png?raw=true)| ![Addinge new note by a popup](https://github.com/zeinabkalanaki/JS-StickyNotes/raw/main/images/1.png?raw=true)|![Editing and deleting a note](https://github.com/zeinabkalanaki/JS-StickyNotes/raw/main/images/2.png?raw=true)
+|![Final result](https://user-images.githubusercontent.com/45565026/196662812-8887390b-4efc-4656-81ad-3d3c8b4b1cce.png)| ![Addinge new note by a popup](https://user-images.githubusercontent.com/45565026/196663112-54491bc5-2f06-4c3e-b2e0-afee36a5f4c1.png)|![Editing and deleting a note](https://user-images.githubusercontent.com/45565026/196663206-54463a95-1dc6-4204-b0a5-4b1059a8b495.png)
 |--|--|--|
 
 
