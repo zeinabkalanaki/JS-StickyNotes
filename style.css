@@ -57,6 +57,7 @@ body {
     padding-top: 20px;
 }
 
+
 .note {
     display: flex;
     flex-direction: column;
@@ -140,13 +141,13 @@ body {
     height: 100%;
     z-index: 2;
 
-    opacity: 0;
-    pointer-events: none;
+    opacity: 0;  
+    pointer-events: none; 
 }
 
 .overlay.show{
     opacity: 1;
-    pointer-events: auto;
+    pointer-events: auto; 
 }
 
 .popup {

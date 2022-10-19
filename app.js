@@ -30,7 +30,7 @@ function getNotes() {
   if (notes) {
     notes.forEach((note, index) => {
       const element = `<div class="note">
-                        <div>
+                        <div class="test">
                           <p class="title">${note.title}</p>
                           <p class="description">${note.content}</p>
                         </div>
