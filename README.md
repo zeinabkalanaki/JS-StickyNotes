@@ -58,81 +58,81 @@ The final result is 👇
 ## 💡 Number 5: Positioning an element relative to its parent
  > Suppose the parent element has class "**settings**" and its child has class "**menu**" as below
  ```
-  <div class="settings">
-    <i class="uil uil-ellipsis-h"></i>
-    <ul class="menu">
-      <li><i class="uil uil-pen"></i>Edit</li>
-      <li><i class="uil uil-trash"></i>Delete</li>
-    </ul>
-  </div>
+    <div class="settings">
+      <i class="uil uil-ellipsis-h"></i>
+      <ul class="menu">
+        <li><i class="uil uil-pen"></i>Edit</li>
+        <li><i class="uil uil-trash"></i>Delete</li>
+      </ul>
+    </div>
  ```
  
  > To do this, "**position: relative;**" should be set for the parent and "**position: absolute;**" should be adjusted for the child. To place the child relative to its parents, top and right or top and left must be set depending on the desired position like below.
  
  ```
- .settings {
-    position: relative;
-    
-    cursor: pointer; //for being clickable
-}
+    .settings {
+       position: relative;
 
-.settings .menu {
-    position: absolute;
-    
-    bottom: 0;
-    right: -5px;
-}
+       cursor: pointer; //for being clickable
+   }
+
+   .settings .menu {
+       position: absolute;
+
+       bottom: 0;
+       right: -5px;
+   }
 
  ```
  
  ## 💡 Number 6: Show and hide an element by hovering on it
  > Suppose that we want to toggle visibility of an an element with class **menu** that is inside an element with class **settings** like below:
   ```
- <div class="settings">
-    <i class="uil uil-ellipsis-h"></i>
-    <ul class="menu">
-      <li><i class="uil uil-pen"></i>Edit</li>
-      <li><i class="uil uil-trash"></i>Delete</li>
-    </ul>
-  </div>
+    <div class="settings">
+       <i class="uil uil-ellipsis-h"></i>
+       <ul class="menu">
+         <li><i class="uil uil-pen"></i>Edit</li>
+         <li><i class="uil uil-trash"></i>Delete</li>
+       </ul>
+     </div>
   ```
  > To do this, "**transform: scale(0);** should be set for the container -here the element with class **settings**- and 3 item below for the desired element -here the element with class **menu**-
 
 ```
-.settings .menu {
-    transform: scale(0);
-}
+   .settings .menu {
+       transform: scale(0);
+   }
 
-.settings:hover .menu {
-    transform: scale(1);
-    transform-origin: bottom right;
-    transition: transform 0.2s ease;
-}
+   .settings:hover .menu {
+       transform: scale(1);
+       transform-origin: bottom right;
+       transition: transform 0.2s ease;
+   }
 
 ```
 ## 💡 Number 7: Creating a pop-up window
  > At least two containers are needed that are parent and child - one of them for creating a transparent div that spans the entire page as the parent (here the div with class **overlay**) and the other for the popup own content as the child (here the div with class **popup**) that are placed in the **body** tag  like below
  
 ```
- <div class="overlay">
-   <div class="popup">
-     <header>
-       <p class="popup-title"> Add note</p>
-       <i class="uil uil-times"></i>
-     </header>
-     <form action="#">
-         <div class="row note-title">
-             <label> Title</label>
-             <input type="text">
-         </div>
-         <div class="row note-content">
-             <label> Description</label>
-             <textarea ></textarea>
-         </div>
-         <button>Add</button>
-     </form>
+   <div class="overlay">
+     <div class="popup">
+       <header>
+         <p class="popup-title"> Add note</p>
+         <i class="uil uil-times"></i>
+       </header>
+       <form action="#">
+           <div class="row note-title">
+               <label> Title</label>
+               <input type="text">
+           </div>
+           <div class="row note-content">
+               <label> Description</label>
+               <textarea ></textarea>
+           </div>
+           <button>Add</button>
+       </form>
+     </div>
    </div>
- </div>
 
 ```
 > To occupy the entire page by an element and place it over all the other elements roles below should be applied:
@@ -155,27 +155,27 @@ The final result is 👇
 > In this example css class **show** and a javascript function named 'showAddPopup' is used to toggle visibility of the popup. So at first opacity of the overlay element is 0 and by adding show class to it, the opacity will be overrided to 1 and popup and overlay will be displayed. As shown below
 
 ```
-.overlay {
-    opacity: 0;
-    pointer-events: none;
-}
+   .overlay {
+       opacity: 0;
+       pointer-events: none;
+   }
 
-.overlay.show{
-    opacity: 1;
-    pointer-events: auto;
-}
+   .overlay.show{
+       opacity: 1;
+       pointer-events: auto;
+   }
 ```
 
 ```
-//Show
-function showAddPopup() {
-  overlay.classList.add("show");
-}
+   //Show
+   function showAddPopup() {
+     overlay.classList.add("show");
+   }
 
-//Hide
-btnClosePopup.addEventListener("click", () => {
-  overlay.classList.remove("show");
-});
+   //Hide
+   btnClosePopup.addEventListener("click", () => {
+     overlay.classList.remove("show");
+   });
 
 ```
 
