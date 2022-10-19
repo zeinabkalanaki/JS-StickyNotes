@@ -193,3 +193,7 @@ btnClosePopup.addEventListener("click", () => {
     max-width: 400px;
     width: 100%;
 ```
+
+> The whole css is needed for popup :
+
+> ![Untitled](https://user-images.githubusercontent.com/45565026/196661284-5ec63e03-0262-45d1-8e77-69218df3b4bc.png)
