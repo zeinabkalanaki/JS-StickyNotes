@@ -114,7 +114,7 @@ The final result is 👇
 
 ```
 ## 💡 Number 7: Creating a pop-up window
- > At least two containers are needed that are parent and child - one of them for creating a transparent div that spans the entire page as the parent (here the div with class **overlay**) and the other for popup own content as the child (here the div with class **popup**) that are placed in the **body** tag  like below
+ > At least two containers are needed that are parent and child - one of them for creating a transparent div that spans the entire page as the parent (here the div with class **overlay**) and the other for the popup own content as the child (here the div with class **popup**) that are placed in the **body** tag  like below
  
 ```
  <div class="overlay">
