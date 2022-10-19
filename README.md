@@ -149,11 +149,24 @@ The final result is 👇
 ```
 > to make it transparent the role below should be used:.
 
-  ```
+ ```
     background-color: rgba(0, 0, 0, 0.4);
  ```
 
-> Since the overlay div accupy the entire page , the other page elements under it is not clicable. So to fix it 'pointer-events: none;' should be appliy to it. In this situation the elements inside the popup as the overlay's child will not be clickable any more, so whener we want to show the popup, it should be changed to 'pointer-events: auto;' 
+> Since the overlay div accupys the entire page , the other page elements under it are not clicable. So to fix it 'pointer-events: none;' should be appliy to it. In this situation the elements inside the popup as the overlay's child will not be clickable any more, so whener we want to show the popup, it should be changed to 'pointer-events: auto;' 
+> In this example css class **show** and a javascript function is used to toggle visibility of the popup. So at first opacity of the overlay element is 0 and by adding show class to it, the opacity will be overrided to 1 and popup and overlay will be displayed. As shown below
+
+```
+.overlay {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.overlay.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+```
 
 > For placing a container exactly at the center of the screen roles below should be used:
 
