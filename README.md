@@ -58,3 +58,33 @@ The final result is 👇
     justify-content: space-between;
     
 ```
+## 💡 Number 5: Positioning an element relative to its parent
+ > Suppose the parent element has class 'setings' and its child has class 'menu' as below
+ ```
+  <div class="settings">
+    <i class="uil uil-ellipsis-h"></i>
+    <ul class="menu">
+      <li><i class="uil uil-pen"></i>Edit</li>
+      <li><i class="uil uil-trash"></i>Delete</li>
+    </ul>
+  </div>
+ ```
+ 
+ > To do this, 'position: relative;' should be set for the parent and 'position: absolute;' should be adjusted for the child. To place the child relative to its parents, top and right or top and left must be set depending on the desired position like below.
+ 
+ ```
+ .settings {
+    position: relative;
+    
+    cursor: pointer; //for being clickable
+}
+
+.settings .menu {
+    position: absolute;
+    
+    bottom: 0;
+    right: -5px;
+}
+
+ ```
+ 
