@@ -138,3 +138,27 @@ The final result is 👇
  </div>
 
 ```
+> To occupy the entire page by an element and place it over all the other elements roles below should be applied:
+```
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+```
+> to make it transparent role below should be used:
+  ```
+  background-color: rgba(0, 0, 0, 0.4);
+ ```
+> For placing a container exactly at the center of the screen roles below should be used:
+
+```
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    max-width: 400px;
+    width: 100%;
+```
