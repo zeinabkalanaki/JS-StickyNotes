@@ -147,10 +147,14 @@ The final result is 👇
     height: 100%;
     z-index: 2;
 ```
-> to make it transparent role below should be used:
+> to make it transparent the role below should be used:.
+
   ```
-  background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.4);
  ```
+
+> Since the overlay div accupy the entire page , the other page elements under it is not clicable. So to fix it 'pointer-events: none;' should be appliy to it. In this situation the elements inside the popup as the overlay's child will not be clickable any more, so whener we want to show the popup, it should be changed to 'pointer-events: auto;' 
+
 > For placing a container exactly at the center of the screen roles below should be used:
 
 ```
